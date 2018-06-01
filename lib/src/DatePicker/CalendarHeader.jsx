@@ -5,6 +5,7 @@ import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
 import Icon from '@material-ui/core/Icon';
 import withUtils from '../_shared/WithUtils';
+import WeekNumber from './WeekNumber';
 
 export const CalendarHeader = (props) => {
   const {
@@ -41,6 +42,7 @@ export const CalendarHeader = (props) => {
       </div>
 
       <div className={classes.daysHeader}>
+        <WeekNumber />
         {utils.getWeekdays().map((day, index) => (
           <Typography
             // eslint-disable-next-line react/no-array-index-key

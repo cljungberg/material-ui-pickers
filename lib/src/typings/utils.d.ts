@@ -39,6 +39,7 @@ export class Utils<TDate> {
   getPreviousMonth(value: TDate): TDate;
  
   getWeekdays(): string[];
+  getWeekNumber(): number;
   getWeekArray(date: TDate): TDate[];
   getYearRange(start: TDate, end: TDate): TDate[];
 

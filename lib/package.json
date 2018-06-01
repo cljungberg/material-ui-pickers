@@ -54,7 +54,7 @@
     "test:date-fns": "cross-env UTILS=date-fns && npm run all-tests",
     "test:luxon": "cross-env NODE_ICU_DATA=./node_modules/full-icu UTILS=luxon && npm run all-tests",
     "typescript": "tsc -p tsconfig.json",
-    "start": "cross-env NODE_ENV=development rollup --config --watch",
+    "start": "cross-env BABEL_ENV=modules NODE_ENV=development rollup --config --watch",
     "prebuild": "rimraf build",
     "build:copy": "node copy.js",
     "build:bundle": "cross-env NODE_ENV=production BABEL_ENV=modules rollup --config",

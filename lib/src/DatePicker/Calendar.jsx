@@ -8,6 +8,7 @@ import CalendarHeader from './CalendarHeader';
 import DomainPropTypes from '../constants/prop-types';
 import DayWrapper from './DayWrapper';
 import Day from './Day';
+import WeekNumber from './WeekNumber';
 import withUtils from '../_shared/WithUtils';
 import { findClosestEnabledDate } from '../_helpers/date-utils';
 
@@ -170,9 +171,21 @@ export class Calendar extends Component {
         key={`week-${week[0].toString()}`}
         className={this.props.classes.week}
       >
+        {this.renderWeekNumber(week)}
         {this.renderDays(week)}
       </div>
     ));
+  }
+
+  renderWeekNumber = (week) => {
+    const { utils } = this.props;
+    const date = week[0];
+
+    return (
+      <WeekNumber>
+        {utils.getWeekNumber(date)}
+      </WeekNumber>
+    );
   }
 
   renderDays = (week) => {
