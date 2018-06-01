@@ -1,6 +1,5 @@
 import React, { Fragment, PureComponent } from 'react';
 import { DatePicker } from 'material-ui-pickers';
-import moment from 'moment';
 
 export default class BasicDatePicker extends PureComponent {
   state = {
@@ -19,7 +18,7 @@ export default class BasicDatePicker extends PureComponent {
         <div className="picker">
           <DatePicker
             label="Basic example"
-            value={moment(selectedDate)}
+            value={selectedDate}
             onChange={this.handleDateChange}
             animateYearScrolling={false}
           />

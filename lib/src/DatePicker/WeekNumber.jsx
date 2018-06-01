@@ -6,13 +6,12 @@ import Typography from '@material-ui/core/Typography';
 
 class WeekNumber extends PureComponent {
   static propTypes = {
-    children: PropTypes.node.isRequired,
     classes: PropTypes.object.isRequired,
-    hidden: PropTypes.bool,
+    children: PropTypes.node,
   }
 
   static defaultProps = {
-    hidden: false,
+    children: null,
   }
 
   render() {
